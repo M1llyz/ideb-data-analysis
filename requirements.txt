@@ -1,0 +1,7 @@
+# Bibliotecas essenciais para manipulação e visualização de dados
+pandas
+numpy
+plotly
+
+# Dependência necessária para a biblioteca Pandas conseguir ler o formato .xlsx (Excel)
+openpyxl

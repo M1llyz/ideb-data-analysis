@@ -1,0 +1,155 @@
+/* Esquema de cores e fontes baseados no Figma (Minimalista/Azul/Escuro) */
+:root {
+    --primary-blue: #0056b3; /* Usado para cabeçalhos e elementos principais */
+    --secondary-blue: #3470d0; /* Para caixas de destaque */
+    --light-grey: #f0f3f6; /* Fundo de caixas leves */
+    --text-dark: #1a1a1a;
+    --text-light: #555;
+    --success-green: #38b43d; /* Para caixas de Insights */
+    --font-stack: 'Arial', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-stack);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px; /* Mais estreito para replicar o layout de página única do Figma */
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+/* -------------------- HEADER -------------------- */
+.header {
+    background-color: var(--light-grey);
+    padding: 40px 0;
+    border-bottom: 2px solid var(--primary-blue);
+    text-align: center;
+}
+.header-title {
+    font-size: 2.2em;
+    color: var(--primary-blue);
+}
+
+/* -------------------- SEÇÕES GERAIS -------------------- */
+h2 {
+    font-size: 1.6em;
+    color: var(--primary-blue);
+    border-bottom: 2px solid var(--light-grey);
+    padding-bottom: 10px;
+    margin: 40px 0 20px 0;
+}
+
+.context-section p, .methodology-section p {
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+/* -------------------- MÉTRICAS (CAIXAS DE TOPO) -------------------- */
+.metrics-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: stretch; /* Garante que todas as caixas tenham a mesma altura */
+    margin-bottom: 40px;
+}
+.metric-box {
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    min-height: 80px;
+}
+.box-main {
+    background-color: var(--secondary-blue);
+    flex-grow: 1.5; /* Ocupa mais espaço que as caixas de ano */
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.metric-group {
+    display: flex;
+    flex-grow: 1;
+    gap: 15px;
+}
+.box-year {
+    background-color: var(--primary-blue);
+    flex-basis: 25%;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -------------------- GRÁFICOS -------------------- */
+.chart-container {
+    width: 100%;
+    height: 500px; /* Altura para os gráficos Plotly interativos */
+    border: 1px solid var(--light-grey);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.chart-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* -------------------- INSIGHTS (CAIXAS VERDES) -------------------- */
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 40px;
+}
+.insight-box {
+    background-color: #e6f7e6; /* Fundo verde claro */
+    border: 1px solid var(--success-green);
+    border-radius: 8px;
+    padding: 20px;
+    font-size: 0.9em;
+    color: var(--text-dark);
+    min-height: 120px;
+}
+
+/* -------------------- MEMBROS DO GRUPO -------------------- */
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas por linha */
+    gap: 20px;
+    text-align: center;
+}
+.member-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 5px;
+    border: 3px solid var(--light-grey);
+}
+.member-card p {
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+/* -------------------- FOOTER -------------------- */
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+    background-color: var(--text-dark);
+    font-size: 0.8em;
+}
