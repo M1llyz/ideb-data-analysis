@@ -18,9 +18,9 @@ O projeto visa realizar uma **análise exploratória** dos impactos da pandemia 
 
 ## 💻 Acesse a Análise Interativa
 
-Clique no link abaixo para acessar o dashboard web e interagir com os gráficos gerados pelo pipeline Python:
+Clique no link abaixo para acessar o dashboard web e interagir com os gráficos gerados pelo pipeline Python, este dashboard utiliza de **Entrega Contínua (CD)**, com **deploy** automatizado na plataforma **Vercel**, para que qualquer atualização no código seja imediatamente compilada e publicada, garantindo a integridade dos dados e a qualidade da entrega do software.
 
-### [✨ ACESSE A INTERFACE WEB AQUI](interface_web/index.html)
+### [✨ ACESSE A INTERFACE WEB AQUI](https://ideb-data-analysis.vercel.app/)
 
 ---
 
